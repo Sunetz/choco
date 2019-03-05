@@ -1,0 +1,18 @@
+def make_choco(small, big, goal):
+    weight_small = 1
+    weight_big = 5
+    whole_part = goal // 5
+    m = goal - (goal // 5) * 5
+    if whole_part <= big and m <= small:
+        return m
+    else:
+        return -1
+    if whole_part > big and goal <= small:
+        return goal
+    else:
+        return -1
+
+
+print(make_choco(3,7,6))
+print(make_choco(0,7,6))
+print(make_choco(3,0,6))
